@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cricket Player Database</title>
+</head>
+<body>
+    <h1>Cricket Player Management</h1>
+
+    <!-- INSERT NEW PLAYER -->
+    <h2>Insert New Player</h2>
+    <form action="ex9" method="post">
+        <input type="hidden" name="action" value="insert">
+        Player Name: <input type="text" name="pname" required><br><br>
+        Team Name: <input type="text" name="team" required><br><br>
+        Runs Scored: <input type="number" name="runs" value="0"><br><br>
+        <input type="submit" value="Add Player">
+    </form>
+
+    <hr>
+
+    <!-- UPDATE EXISTING PLAYER -->
+    <h2>Update Player</h2>
+    <form action="ex9" method="post">
+        <input type="hidden" name="action" value="update">
+        Player ID: <input type="number" name="player_id" required><br><br>
+        Player Name: <input type="text" name="pname"><br><br>
+        Team Name: <input type="text" name="team"><br><br>
+        Runs Scored: <input type="number" name="runs"><br><br>
+        <input type="submit" value="Update Player">
+    </form>
+
+    <hr>
+
+    <!-- VIEW PLAYERS -->
+    <h2>View Players</h2>
+    <form action="ex9" method="get">
+        Team Name (optional filter): <input type="text" name="team"><br><br>
+        <input type="submit" value="View Players">
+    </form>
+
+</body>
+</html>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app>
+
+    <servlet>
+        <servlet-name>ex9</servlet-name>
+        <servlet-class>ex9</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ex9</servlet-name>
+        <url-pattern>/ex9</url-pattern>
+    </servlet-mapping>
+
+</web-app>
