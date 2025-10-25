@@ -1,41 +1,43 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Cricket Player Database</title>
+    <title>Cricket Line-Up Legend</title>
 </head>
 <body>
-    <h1>Cricket Player Management</h1>
+    <h1>Cricket Team Line-Up Management</h1>
 
-    <!-- INSERT NEW PLAYER -->
-    <h2>Insert New Player</h2>
+    <!-- ADD NEW PLAYER TO LINE-UP -->
+    <h2>Add Player to Line-Up</h2>
     <form action="ex9" method="post">
         <input type="hidden" name="action" value="insert">
         Player Name: <input type="text" name="pname" required><br><br>
         Team Name: <input type="text" name="team" required><br><br>
+        Batting Order Position: <input type="number" name="position" min="1"><br><br>
         Runs Scored: <input type="number" name="runs" value="0"><br><br>
-        <input type="submit" value="Add Player">
+        <input type="submit" value="Add to Line-Up">
     </form>
 
     <hr>
 
-    <!-- UPDATE EXISTING PLAYER -->
-    <h2>Update Player</h2>
+    <!-- MODIFY PLAYER IN LINE-UP -->
+    <h2>Update Player in Line-Up</h2>
     <form action="ex9" method="post">
         <input type="hidden" name="action" value="update">
         Player ID: <input type="number" name="player_id" required><br><br>
         Player Name: <input type="text" name="pname"><br><br>
         Team Name: <input type="text" name="team"><br><br>
+        Batting Order Position: <input type="number" name="position" min="1"><br><br>
         Runs Scored: <input type="number" name="runs"><br><br>
-        <input type="submit" value="Update Player">
+        <input type="submit" value="Update Line-Up">
     </form>
 
     <hr>
 
-    <!-- VIEW PLAYERS -->
-    <h2>View Players</h2>
+    <!-- VIEW TEAM LINE-UP -->
+    <h2>View Team Line-Up</h2>
     <form action="ex9" method="get">
         Team Name (optional filter): <input type="text" name="team"><br><br>
-        <input type="submit" value="View Players">
+        <input type="submit" value="View Line-Up">
     </form>
 
 </body>
