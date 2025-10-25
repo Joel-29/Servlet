@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cricket Players</title>
+</head>
+<body>
+    <h1>Cricket Player List</h1>
+    <div id="playerTable"></div>
+
+    <script>
+        // Load XML file
+        fetch('ex10.xml')
+        .then(response => response.text())
+        .then(str => (new window.DOMParser()).parseFromString(str, "text/xml"))
+        .then(xml => {
+            const players = xml.getElementsByTagName("player");
+            let html = "<table border='1' cellpadding='10'><tr><th>Name</th><th>Country</th><th>Role</th><th>Matches</th></tr>";
+            for (let i = 0; i < players.length; i++) {
+                html += "<tr>";
+                html += "<td>" + players[i].getElementsByTagName("name")[0].textContent + "</td>";
+                html += "<td>" + players[i].getElementsByTagName("country")[0].textContent + "</td>";
+                html += "<td>" + players[i].getElementsByTagName("role")[0].textContent + "</td>";
+                html += "<td>" + players[i].getElementsByTagName("matches")[0].textContent + "</td>";
+                html += "</tr>";
+            }
+            html += "</table>";
+            document.getElementById("playerTable").innerHTML = html;
+        });
+    </script>
+</body>
+</html>
